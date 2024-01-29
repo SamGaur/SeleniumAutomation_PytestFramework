@@ -8,7 +8,6 @@ class TestLogin():
     @pytest.fixture(scope="class")
     def test_setup(self):
         global driver
-        # driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe")
         driver = webdriver.Chrome()
         driver.implicitly_wait(5)
         driver.maximize_window()
@@ -42,7 +41,8 @@ class TestLogin():
 #     @pytest.fixture(scope="session")
 #     def test_setup(self):
 #         global driver
-#         # Uncomment the line below and provide the correct path if needed
+#
+#         driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe")
 #         driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe")
 #         driver.implicitly_wait(5)
 #         driver.maximize_window()
